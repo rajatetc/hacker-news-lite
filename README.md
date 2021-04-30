@@ -37,6 +37,10 @@ Start the server
   npm run start
 ```
 
+## Deployment
+
+Netlify
+
   
 ## API Reference
 
