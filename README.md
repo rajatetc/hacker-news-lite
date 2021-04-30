@@ -8,7 +8,7 @@ Toggle dark mode.
 
 ## Tech Stack
 
-React
+Create React App
 
 
 ## Deployment
