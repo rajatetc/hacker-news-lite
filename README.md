@@ -1,3 +1,47 @@
-Articles from Hacker News using HN Search API with search and pagination functionality 
 
-Live at: https://hackers-news-lite.netlify.app/
+# Hacker News Lite
+
+Search articles from Hacker News. 
+Get paginated results. 
+Toggle dark mode.
+
+
+## Tech Stack
+
+React
+
+  
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/rajatetc/hacker-news-lite.git
+```
+
+Go to the project directory
+
+```bash
+  cd hacker-news-lite
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run start
+```
+
+  
+## API Reference
+
+https://hn.algolia.com/api
+
+  
+
+  
