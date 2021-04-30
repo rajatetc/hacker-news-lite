@@ -10,6 +10,11 @@ Toggle dark mode.
 
 React
 
+
+## Deployment
+
+Netlify
+
   
 ## Run Locally
 
@@ -37,11 +42,7 @@ Start the server
   npm run start
 ```
 
-## Deployment
 
-Netlify
-
-  
 ## API Reference
 
 https://hn.algolia.com/api
