@@ -4,6 +4,7 @@ import {
   REMOVE_STORY,
   HANDLE_PAGE,
   HANDLE_SEARCH,
+  CHANGE_THEME,
 } from './actions'
 
 const reducer = (state, action) => {
@@ -46,8 +47,12 @@ const reducer = (state, action) => {
         }
         return { ...state, page: prevPage }
       }
+
+    case CHANGE_THEME:
+      return { ...state, darkTheme: !state.darkTheme }
+
     default:
-      throw new Error(`no matching "${action.type}" action`)
+      throw new Error(`no mathching "${action.type}" action type`)
   }
 }
 export default reducer

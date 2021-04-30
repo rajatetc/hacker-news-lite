@@ -6,6 +6,7 @@ import {
   REMOVE_STORY,
   HANDLE_PAGE,
   HANDLE_SEARCH,
+  CHANGE_THEME,
 } from './actions'
 import reducer from './reducer'
 
@@ -17,6 +18,7 @@ const initialState = {
   query: 'react',
   page: 0,
   nbPages: 0,
+  darkTheme: false,
 }
 
 const AppContext = React.createContext()
@@ -51,13 +53,22 @@ const AppProvider = ({ children }) => {
     dispatch({ type: HANDLE_PAGE, payload: value })
   }
 
+  const toggleTheme = () => {
+    dispatch({ type: CHANGE_THEME })
+  }
+
   useEffect(() => {
     fetchStories(`${API_ENDPOINT}query=${state.query}&page=${state.page}`)
-  }, [state.query, state.page])
+    if (state.darkTheme) {
+      document.documentElement.className = 'dark-theme'
+    } else {
+      document.documentElement.className = 'light-theme'
+    }
+  }, [state.query, state.page, state.darkTheme])
 
   return (
     <AppContext.Provider
-      value={{ ...state, removeStory, handleSearch, handlePage }}
+      value={{ ...state, removeStory, handleSearch, handlePage, toggleTheme }}
     >
       {children}
     </AppContext.Provider>
