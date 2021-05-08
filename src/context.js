@@ -13,11 +13,15 @@ import reducer from './reducer'
 const API_ENDPOINT = 'https://hn.algolia.com/api/v1/search?'
 
 const getStorageTheme = () => {
-  let darkTheme = false
-  if (localStorage.getItem('darkTheme')) {
-    darkTheme = localStorage.getItem('darkTheme')
+  let darkMode = false
+  let theme = 'light'
+  if (localStorage.getItem('theme')) {
+    theme = localStorage.getItem('theme')
   }
-  return darkTheme
+  if (theme === 'dark') {
+    darkMode = true
+  }
+  return darkMode
 }
 
 const initialState = {
@@ -69,10 +73,10 @@ const AppProvider = ({ children }) => {
     fetchStories(`${API_ENDPOINT}query=${state.query}&page=${state.page}`)
     if (state.darkTheme) {
       document.documentElement.className = 'dark-theme'
-      localStorage.setItem('darkTheme', true)
+      localStorage.setItem('theme', 'dark')
     } else {
       document.documentElement.className = 'light-theme'
-      localStorage.setItem('darkTheme', false)
+      localStorage.setItem('theme', 'light')
     }
   }, [state.query, state.page, state.darkTheme])
 
