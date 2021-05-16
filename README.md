@@ -8,7 +8,12 @@ Toggle dark mode.
 
 ## Tech Stack
 
-React
+Create React App
+
+
+## Deployment
+
+Netlify
 
   
 ## Run Locally
@@ -37,7 +42,7 @@ Start the server
   npm run start
 ```
 
-  
+
 ## API Reference
 
 https://hn.algolia.com/api
