@@ -8,6 +8,22 @@ function App() {
       <SearchForm />
       <Buttons />
       <Stories />
+      <div
+        style={{
+          display: 'grid',
+          placeItems: 'center',
+        }}
+      >
+        <button className='btn'>
+          <a
+            href='https://github.com/rajatetc/hacker-news-lite'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <i className='fab fa-github'></i>
+          </a>
+        </button>
+      </div>
     </>
   )
 }
