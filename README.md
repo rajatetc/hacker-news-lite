@@ -1,10 +1,13 @@
 
 # Hacker News Lite
 
+![Demo Video](https://media.giphy.com/media/aBR4eL4FFjgU7DCqid/giphy.gif)
+
 Search articles from Hacker News. 
 Get paginated results. 
 Toggle dark mode.
 
+[Demo Link](https://hackers-news-lite.netlify.app/)
 
 ## Tech Stack
 
