@@ -7,7 +7,7 @@ Search articles from Hacker News.
 Get paginated results. 
 Toggle dark mode.
 
-[Demo Link](https://hackers-news-lite.netlify.app/)
+[Demo](https://hackers-news-lite.netlify.app/)
 
 ## Tech Stack
 
